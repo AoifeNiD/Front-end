@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+<script src="../ARIAfinal/scripts.js"></script>
+<link rel="stylesheet" type="text/css" href="ARIAstyle.css"> 
+	
+	<title>Mathgame</title>
+</head>
+
+<!--Banner starts-->
+<body>
+	<div id="banner">
+        <header>
+          <h1>I Love Learning</h1>
+        </header>
+ <nav>
+ 	<ul>
+ 		
+ 		<li><a href="../ARIAfinal/games.html" class="glow"><span>Back To Games</span></a></li>
+ 		
+ 	</ul>
+ </nav>
+       </div>  
+     <!-- Banner ends here -->
+     
+     <!--body starts--> 
+	<div id="mathcontainer">
+		<h2>Math Puzzle</h2>
+			<p>Drag and drop the correct answer to the Question Mark</p>
+	
+<div id="targetDiv"><p></p></div>
+	<br />
+	
+	<p id="mathList"></p>
+
+		</body>
+			<div class="album">
+			<img id="drag1" src="../ARIAfinal/mockimgs/plus.jpg" draggable="true" ondragstart="drag(event)" width="69" height="69">
+			<img id="drag2" src="../ARIAfinal/mockimgs/minus.jpg" draggable="true" ondragstart="drag(event)" width="69" height="69">
+			<img id="drag3" src="../ARIAfinal/mockimgs/divide.jpg" draggable="true" ondragstart="drag(event)" width="69" height="69">
+			<img id="drag4" src="../ARIAfinal/mockimgs/multiply.jpg" draggable="true" ondragstart="drag(event)" width="69" height="69">
+			</div>
+</div>
+</body>
+<!--Body ends-->
+
+
+
+<!--JSON SCRIPT FOR GAME ARRAY-->
+
+
+	<script type="text/javascript">
+	// Create the math JSON object
+	var math = { "plus" : [ // array of student objects
+									{ "firstNum" : 4, 
+									  "secondNum" : 4,
+							          "lastNum" : 8 },
+						    ]
+					   }; 
+	
+	/* Function to list all equasions in the system */
+	function listMath() {
+		displayList = ''; // This is a string to build up a list to display
+		for(i in math){ 
+			if (i == 'plus') { 
+				for (j=0; j < math[i].length; j++) // The info is stored in a JSON object, we can use a for loop to iterate through it
+				{
+					// build up our display string eg. math[i][j]["firstNum"]
+					// i is the name\value pair from the first loop, j is the counter we are using to go through the JSON object
+					displayList = displayList + math[i][j]["firstNum"] + '<span id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> ?</span> ' + math[i][j]["secondNum"] +' = '+ math[i][j]["lastNum"] + '<br>';
+				}
+			}
+		}
+				
+		// write the content of the displayList to an element on the page
+		document.getElementById("mathList").innerHTML  = displayList;
+		
+	}
+	
+	// call the function to run
+	listMath();
+	</script>
+
+	
+</html>

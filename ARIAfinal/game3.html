@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<script src="../ARIAfinal/scripts.js"></script>
+<link rel="stylesheet" type="text/css" href="ARIAstyle.css"> 
+	
+	<title>Music</title>
+</head>
+
+<!--Banner starts-->
+
+<body>
+		<div id="banner">
+        <header>
+          <h1>I Love Learning</h1>
+        </header>
+ <nav>
+ 	<ul>
+ 		
+ 		<li><a href="../ARIAfinal/games.html" class="glow"><span>Back To Games</span></a></li>
+ 		
+ 	</ul>
+ </nav>
+       </div>  
+     <!-- Banner ends here -->
+
+<!--Body starts--> 
+<div id="outercontainer">
+<div id="mathcontainer">
+	<h2>Music Guessing Game</h2>
+	<br />
+	<h3>Click on the button you think is correct.</h3>
+	
+	
+	<p id="questionList"></p>
+	
+	<audio controls>
+  <source src="../ARIAfinal/mockimgs/MySong4.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+	
+	<p id="demo"></p>
+	
+	<input class="sci" type="button" onclick="function3()" value="Violin"/>
+	<input class="sci" type="button" onclick="function2()" value="Piano"/>
+	<input class="sci" type="button" onclick="function1()" value="Guitar"/>
+	
+	</div>
+</div>	
+</body>	
+<!--Body ends-->
+
+
+<!--SCRIPT FOR BUTTON GAME-->
+
+<script>
+function function1() {
+    var x;
+    if (confirm("Is this your final answer?") == true) {
+        x = "You are Correct!";
+    } else {
+        x = "You are Incorrect!";
+    }
+    document.getElementById("demo").innerHTML = x;
+}
+function function2() {
+    var x;
+    if (confirm("Is this your final answer?") == true) {
+        x = "You are Incorrect!";
+    } else {
+        x = "You have one more try!";
+    }
+    document.getElementById("demo").innerHTML = x;
+}
+function function3() {
+    var x;
+    if (confirm("Is this your final answer?") == true) {
+        x = "You are Incorrect!";
+    } else {
+        x = "You have one more try!";
+    }
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+<!--SCRIPT FOR JSON ARRAY GAME-->
+
+	<script type="text/javascript">
+	// Create the JSON object
+	var riddle = { "question" : [ 
+								{ "firstQ" : "What Instrument is this?", 
+								  "secondQ": "What note is this?",
+							      "thirdQ" : "What kind of Instrumet is this?" }
+								]
+				   }; // End riddle Object
+	
+	/* Function to list all equasions in the system */
+	function listRiddle() {
+		displayList = ''; // This is a string to build up a list of maths to display
+		for(i in riddle){ // for loop to go through all the name\value pairs in the JSON structure
+			if (i == 'question') { // if it is the addition value 
+				for (j=0; j < riddle[i].length; j++) // The info is stored in a JSON object, we can use a for loop to iterate through it
+				{
+					// build up display string eg. math[i][j]["firstNum"]
+					// i is the name\value pair from the first loop, j is the counter we are using to go through the math JSON object
+					displayList = displayList + riddle[i][j]["firstQ"] +'<br>'; 
+					}
+			}
+		}	
+		// write the content of the diaplayList to an element on the page
+		document.getElementById("questionList").innerHTML  = displayList;
+	}
+	
+	// call the function to run
+	listRiddle();
+	
+
+	</script>

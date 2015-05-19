@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ARIA CA3</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" type="text/css" href="ARIAstyle.css"> 
+			
+			<!--For Ajax Buttons -  Get Info-->
+			<script type="text/javascript">
+			var XMLHttpRequestObject = false;
+			if (window.XMLHttpRequest) {
+			XMLHttpRequestObject = new XMLHttpRequest();
+			} else if (window.ActiveXObject) {
+			XMLHttpRequestObject =
+			new ActiveXObject("Microsoft.XMLHTTP");
+			}
+	
+			function getData(datasource, divID) {
+				document.getElementById('targetDiv1').innerHTML = '';
+				document.getElementById('targetDiv2').innerHTML = '';
+				document.getElementById('targetDiv3').innerHTML = '';
+				if (XMLHttpRequestObject) {
+					var obj = document.getElementById(divID);
+					XMLHttpRequestObject.open("GET", datasource, true);
+					XMLHttpRequestObject.onreadystatechange = function () {
+						if (XMLHttpRequestObject.readyState == 4
+						&& XMLHttpRequestObject.status == 200) {
+						obj.innerHTML = XMLHttpRequestObject.responseText;
+						}
+					};
+							XMLHttpRequestObject.send(null);
+				}
+			}
+					
+			</script>
+			<script src="../ARIAfinal/scripts.js"></script>
+			<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</head>
+	
+	  <!-- Banner starts here -->   
+	<body>
+		<div id="banner">
+        <header>
+          <h1>I Love Learning</h1>
+        </header>
+ <nav>
+ 	<ul>
+ 		<li><a href="../ARIAfinal/index.html" class="glow"><span>Home |</span></a></li>
+ 		<li><a href="../ARIAfinal/games.html" class="glow"><span>Games |</span></a></li>
+ 		<li><a href="../ARIAfinal/research.html"class="glow"><span>Research |</span></a></li>
+ 		<li><a href="../ARIAfinal/parents.html"class="glow"><span>Parents Corner </span></a></li>
+ 	</ul>
+ </nav>
+       </div>  
+     <!-- Banner ends here -->   
+   
+   	  <!-- Body content here -->     
+ <div id="outercontainer">
+ 	<br />
+ <div class="container">
+ 	
+        
+      <div id="gamewrap">
+      	
+     <!--insert game links here, album=game 4 css-->
+<div class="album">
+	<h1 class="heading"><strong>Games</strong></h1>
+	<br />
+	<p>Click on the button to play the game.</p>
+	<h3>Math Puzzle</h3>
+	<a href="../ARIAfinal/mathgame.html"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a>	
+</div>
+
+<div class="album">
+	<h3>Science Riddles</h3>
+	<a href="../ARIAfinal/game2.html"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a>
+</div>
+
+<div class="album">
+	<h3>Music Guessing Game</h3>
+<a href="../ARIAfinal/game3.html"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a>	
+</div>
+     
+ </div>
+<!-- End of gamewrap-->
+
+ </div>
+ <br /> 
+
+  </div>
+  
+	</body>
+	<!--body ends, footer begins-->
+	
+	<footer id="foot">
+ 	<p>I Love Learning 2015</p>
+ </footer> 
+ </html>

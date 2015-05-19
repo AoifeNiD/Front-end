@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+
+	<title>Simple JSON Demo</title>
+</head>
+
+
+<body bgcolor="#FFFFFF">
+	<h1>Student List</h1>
+	<p>This is a list of all students currently in our system</p>
+	
+	<p id="additionList"></p>
+	
+
+
+	<script type="text/javascript">
+	// Create the JSON object
+	var math = { "addition" : [ // array of addition equasions
+									{ "firstNum" : 4, // First element
+									  "secondNum" : 4,
+							          "lastNum" : 8 },
+									{ "firstNum" : 9, // Second Element
+									  "secondNum" : 9,
+							          "lastNum" : 18 }
+						    ], 
+			    "subtraction" : [ // array of subtraction equasions
+								    { "firstNum" : 6, // First Element
+								      "secondNum" : 3,
+									  "lastNum" : 3 },
+								    { "firstNum" : 10, // Second Element
+								      "secondNum" : 5,
+								      "lastNum" : 5 }
+							],  
+				 "multiplication" : [ // array of multiplication equasions
+								    { "firstNum" : 5, // First Element
+								      "secondNum" : 5,
+									  "lastNum" : 25 },
+								    { "firstNum" : 4, // Second Element
+								      "secondNum" : 6,
+								      "lastNum" : 24 }
+							],
+					 "division" : [ // array of division equasions
+								    { "firstNum" : 6, // First Element
+								      "secondNum" : 3,
+									  "lastNum" : 2 },
+								    { "firstNum" : 8, // Second Element
+								      "secondNum" : 2,
+								      "lastNum" : 4 }
+							] 
+				   }; // End Math Object
+	
+	/* Function to list all equasions in the system */
+	function listMath() {
+		displayList = ''; // This is a string to build up a list of maths to display
+		for(i in math){ // for loop to go through all the name\value pairs in the JSON structure
+			if (i == 'addition') { // if it is the addition value 
+				for (j=0; j < math[i].length; j++) // The info is stored in a JSON object, we can use a for loop to iterate through it
+				{
+					// build up display string eg. math[i][j]["firstNum"]
+					// i is the name\value pair from the first loop, j is the counter we are using to go through the math JSON object
+					displayList = displayList + math[i][j]["firstNum"] + ' + ' + math[i][j]["secondNum"] + ' = ' + math[i][j]["lastNum"] + '<br>';
+				}
+			}
+		}
+		for(i in math){ // for loop to go through all the name\value pairs in the JSON structure
+			if (i == 'subtraction') { // if it is the addition value 
+				for (j=0; j < math[i].length; j++) // The info is stored in a JSON object, we can use a for loop to iterate through it
+				{
+					// build up display string eg. math[i][j]["firstNum"]
+					// i is the name\value pair from the first loop, j is the counter we are using to go through the math JSON object
+					displayList = displayList + math[i][j]["firstNum"] + ' - ' + math[i][j]["secondNum"] + ' = ' + math[i][j]["lastNum"] + '<br>';
+				}
+			}
+		}
+		for(i in math){ // for loop to go through all the name\value pairs in the JSON structure
+			if (i == 'multiplication') { // if it is the addition value 
+				for (j=0; j < math[i].length; j++) // The info is stored in a JSON object, we can use a for loop to iterate through it
+				{
+					// build up display string eg. math[i][j]["firstNum"]
+					// i is the name\value pair from the first loop, j is the counter we are using to go through the math JSON object
+					displayList = displayList + math[i][j]["firstNum"] + ' x ' + math[i][j]["secondNum"] + ' = ' + math[i][j]["lastNum"] + '<br>';
+				}
+			}
+		}
+		for(i in math){ // for loop to go through all the name\value pairs in the JSON structure
+			if (i == 'division') { // if it is the addition value 
+				for (j=0; j < math[i].length; j++) // The info is stored in a JSON object, we can use a for loop to iterate through it
+				{
+					// build up display string eg. math[i][j]["firstNum"]
+					// i is the name\value pair from the first loop, j is the counter we are using to go through the math JSON object
+					displayList = displayList + math[i][j]["firstNum"] + ' / ' + math[i][j]["secondNum"] + ' = ' + math[i][j]["lastNum"] + '<br>';
+				}
+			}
+		}		
+		// write the content of the diaplayList to an element on the page
+		document.getElementById("additionList").innerHTML  = displayList;
+		
+	}
+	
+	// call the function to run
+	listMath();
+	</script>
+</body>
+</html>

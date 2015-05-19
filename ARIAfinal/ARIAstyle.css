@@ -1,0 +1,389 @@
+/* ids- banner (across the top)
+ * 		outercontainer (content wrapper - under nav)
+ * 		blurb (space for a spiel)
+ * 		register (form styling)	
+ * 		container (game environment)
+ *  */
+
+/* !!!!!!!!!!!!!!!!!This section of CSS for MOBILE!!!!!!!!!!!!!!!!!!! */
+
+/* Fill screen */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation styling.... */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: center;
+}
+
+li {
+    float: left;
+}
+
+a:link, a:visited {
+    display: block;
+    font-weight: lighter;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+}
+
+a.glow:hover
+{
+	text-decoration: none;
+	color: #fff;
+	text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
+	-webkit-transition: 500ms linear 0s;
+	-moz-transition: 500ms linear 0s;
+	-o-transition: 500ms linear 0s;
+	transition: 500ms linear 0s;
+	outline: 0 none;
+}
+/*...to here. */
+
+/* Long line on the top w/ header & nav */
+h1 {
+	font-size: 90px;
+	font-weight: strong;
+}
+
+#banner {
+	width: auto;
+	background-color: #8AB8E6;
+	padding: 1em;
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+/* The body, font and background - blurb, video, register, images */
+p {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: 200;
+    font-size: 18px;
+}
+h2 {
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: 500;
+    font-size: 23px;
+}
+video {
+	width: 100%;
+	margin-left: 5px; 
+	
+}
+/*orchestra img*/
+#orch {
+	width: 80%;
+	background: white;
+}
+/*orchestra img*/
+.heading{
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	text-align: center;
+}
+
+ #blurb{
+	background-color: white;
+	color: rgba(38, 121, 255, 0.7);
+	width: 100%;
+	margin-bottom: 5px;
+	padding: 10px;
+}
+
+#gamewrap{
+	background-color: white;
+	padding: 10px;
+}
+
+#outercontainer {
+        color: white;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        background-color: white;
+        background-image: url(../ARIAfinal/mockimgs/berries.jpg);
+        background-size: cover;
+        width: 100%;
+      }
+
+#outercontainer h1 {
+        font-weight: 200;
+        font-size: 60px;
+        line-height: 1em;
+        margin-bottom: 10px;
+      }
+
+#outercontainer #blurb {
+        font-weight: 200;
+        font-size: 18px;
+        
+      }
+
+#outercontainer #register {
+        background-color: #8AB8E6;
+        background-color: rgba(153, 204, 255, 0.7);
+        padding: 1em;
+      }
+
+#outercontainer #register h2 {
+		font-size: 2em;
+        font-weight: 100;
+        padding: 0;
+        margin: 0;
+      }
+
+#outercontainer #register label {
+        font-size: 1em;
+        font-weight: 200;
+        padding-top: 12px;
+        display: block;
+      }
+
+#outercontainer #register input {
+        width: 100%;
+        font-size: 1em;
+        font-weight: 100;
+        padding: 5px;
+        box-sizing: border-box;
+        color: black;
+      }
+
+#outercontainer #register input[type=submit]{
+        background-color: hsla(357, 62%, 51%, 1);
+        color: white;
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        box-sizing: border-box;
+        font-size: 18px;
+      }
+
+input[type=button] {
+		background-color: hsla(357, 62%, 51%, 1);
+        color: white;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: none;
+        font-size: 50px;
+	}
+input[type=submit] {
+		background-color: hsla(357, 62%, 51%, 1);
+        color: white;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px;
+        border: none;
+        font-size: 18px;
+} 	    
+
+#register{
+	padding: 15px;
+	margin-bottom: 15%;
+	}    
+	
+#container {
+	background-color: #8AB8E6;
+	width: 100%;
+	height:auto;
+	box-sizing: border-box;
+	padding: 2%;
+}
+#outercontainer #container2{
+	padding: 10px;
+	margin-top: 10px;
+	width: 100%;
+    float: left;
+   background-color: rgba(45, 108, 191, 1);
+   
+} 
+
+#targetDiv1 {
+	font-family: "Lucida Console", Monaco, monospace;
+}
+.album {
+	 background-color: rgba(138, 184, 230, 0.9);
+	 box-sizing: border-box;
+	 padding: 1em;
+	 text-align: center;
+	 margin-top; 5px;
+	 width: 100%;
+} 
+ 
+/*for games pages*/
+#mathcontainer{
+	background: grey;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-weight: 200px;
+	width: 100%;
+	height:auto;
+	padding: 10px;
+	text-align:center;
+}
+	
+#mathcontainer p {
+	font-size: 30px;
+	color: white;
+	}
+	
+#MessageDiv{
+	font-size: 18px;
+	color: green;
+}
+
+#mathcontainer h2{
+	font-size: 50px;
+	font-family: "Lucida Console", Monaco, monospace;
+	color: black;
+}
+
+/*The footer*/
+#foot {
+	width: 100%;
+	height:auto;
+	background-color: rgba(45, 108, 191, 1);
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	text-align: center; 
+	color:#FFFFFF;
+}
+/*END MOBILE*/
+
+/* For responsiveness to DESKTOP! */ 
+/* The content of container and outer - blurb video form and games */     
+@media screen and (min-width: 600px) {
+	
+.heading{
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	text-align: center;
+}
+ .album {
+	 background-color: rgba(138, 184, 230, 0.9);
+	 box-sizing: border-box;
+	 padding: 0.5em;
+	 text-align: center;
+	 width: 100%;
+	 
+}          
+.container {
+            margin: auto;
+            max-width: 950px;
+          }          
+#orch {
+	width: 80%;
+}
+
+img {
+	background-color: white;
+}
+
+video {
+	max-width :350px; 
+}
+
+#targetDiv1 { 
+	margin: auto;
+	max-width: 950px;
+	
+	}
+          
+#blurb {
+	float: left;
+	font-weight: 200;
+    font-size: 16px;
+    max-width: 65%;
+   
+}
+
+#container {
+	width: 100%; 
+}
+
+#outercontainer {
+            float:left; 
+            font-weight: 200;
+        
+          }
+          
+#outercontainer br {
+            clear: both;
+          }
+          
+#register {
+            float:right;
+            padding: 10px;
+            width: 30%;
+            box-sizing: border-box;
+            font-weight: 300;
+            margin-top: 0.4%;
+            margin-bottom: 5%;
+          }
+
+#container2 {
+            width: 100%;
+            float: right;
+            background-color: rgba(45, 108, 191, 1);
+           
+#gamewrap {
+		margin-top: 2%;            
+          }
+
+/*for maths game*/
+#mathcontainer{
+	background:grey;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-weight: 200px;
+	width: 100%;
+	padding: 30px;
+	text-align:center;
+	color: white;
+	font-size: 30px;
+}
+
+#targetDiv {
+	min-width:150px;
+	min-height:150px;
+	border:1px solid #ffffff;
+	}
+	
+#mathcontainer p {
+	font-size: 100px;
+	color: green;
+	}
+	
+#MessageDiv{
+	font-size: 30px;
+	color: green;
+}
+
+#mathcontainer h2{
+	font-size: 100px;
+	font-family: "Lucida Console", Monaco, monospace;
+	color: black;
+}
+
+#mathcontainer {
+            float:left; 
+            font-weight: 200;
+            width: 100%;
+            padding: 2%;
+           }
+           
+.sci {
+	font-size: 50px;
+}
+        
+#foot {
+	width: auto;
+	background-color: rgba(45, 108, 191, 1);
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	color: white; 
+	padding: 100px;
+}
