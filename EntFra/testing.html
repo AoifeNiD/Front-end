@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	 <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>My Now Amazing Webpage</title>
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.3.11/slick.css"/>
+<link rel="stylesheet" type="text/css" href="ARIAstyle.css">
+    </head>
+    <body>
+    	<div id="banner">
+		 <nav>
+ 	<ul>
+ 		<li><a href="#"><span>Create Event </span></a></li>
+ 		<li><a href="#"><span>| Mail </span></a></li>
+ 		<li><a href="#"><span>| Sign Out </span></a></li>
+ 	</ul>
+ </nav>
+        
+       </div>
+<div id="outercontainer">
+ <div id="formcontainer">
+ 	<h1>Event-U-Ally</h1>
+ 	<h3>Your Event Ally</h3>
+ 	<div class="l">
+    <div class="fade">
+   			<div>
+				<label for="search1">I'm looking for:</label>
+					<br />
+      			<select>
+    				<option value="" disabled selected>A Band/ Magician/ Venue...</option>
+   					<option value="opt1">Band</option>
+   					<option value="opt2">Catering</option>
+   					<option value="opt3">Entertainer</option>
+   					<option value="opt4">Funfair</option>
+   					<option value="opt5">Hologram</option>
+   					<option value="opt6">PA's</option>
+				</select>
+			</div>
+			
+			<div>
+				<label for="search2">In:</label>
+					<br />
+      			<select>
+    				<option value="" disabled selected>Kerry/ Dublin/ Longford...</option>
+   					<option value="opt1">Cork</option>
+   					<option value="opt2">Dublin</option>
+   					<option value="opt3">Galway</option>
+   					<option value="opt4">Kerry</option>
+   					<option value="opt5">Limerick</option>
+   					<option value="opt6">Louth</option>
+				</select>
+			</div>
+			
+			<div>
+				 <label for="search3">At this time:</label>
+					<br />
+      			 <input type="date" name="arrival" id="arrival" required date/>
+			</div>
+			<div>
+				<label for="search4">Click to submit your criteria:</label>
+					<br />
+      			<input type="submit" value="Finish" >
+			</div>	
+    	</div>
+    	</div>
+   </div>
+</div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.11/slick.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){       
+$('.fade').slick({
+    accesibility: true,
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 700,
+    autoplay:true,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1
+ });
+    
+        });
+</script>
+
+    </body>
+    <footer>
+    	<p>Event-U-Ally 2015 - Seanna, Eanna and Una</p>
+    </footer>
+</html>

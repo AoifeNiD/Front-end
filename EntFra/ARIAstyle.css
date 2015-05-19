@@ -1,0 +1,247 @@
+/* ids- banner (across the top)
+ * 		outercontainer (content wrapper - under nav)
+ * 		blurb (space for a spiel)
+ * 		register (form styling)	
+ *  */
+
+/* This section of CSS for MOBILE!!! */
+
+/* Fill screen */
+body {
+    margin: 0;
+    padding: 0;
+   
+}
+
+/* Navigation styling.... */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: center;
+}
+
+li {
+    float: left;
+}
+
+a:link, a:visited {
+    display: block;
+    font-weight: lighter;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    background-color: #5070A1;
+    border-radius: 25%;
+}
+/*...to here. */
+
+
+
+/* Long line on the top w/ header & nav */
+#banner {
+	width: auto;
+	background-color: #8AB8E6;
+	padding: 1em;
+    color: white;
+    font-family: Roboto, helvetica, arial, sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+/* The body, font and background - blurb video register */
+#outercontainer {
+        padding: 0.8em;
+        color: white;
+        font-family: Roboto, helvetica, arial, sans-serif;
+        background-color: silver;
+        background-image: url(imgs/Bunting.jpg);
+        background-size: cover;
+      }
+
+
+      #outercontainer h1 {
+        font-weight: 200;
+        font-size: 2.5em;
+        line-height: 1em;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        font-weight: lighter;
+      }
+
+#outercontainer #blurb {
+        font-weight: 200;
+        font-size: 18px;
+        
+      }
+
+#outercontainer #register {
+        background-color: #8AB8E6;
+        background-color: rgba(153, 204, 255, 0.7);
+        padding: 1em;
+      }
+
+#outercontainer #register h2 {
+		font-size: 2.5em;
+        font-weight: 100;
+        padding: 0;
+        margin: 0;
+      }
+
+#outercontainer #register label {
+        font-size: 2.5em;
+        font-weight: 200;
+        padding-top: 12px;
+        display: block;
+      }
+
+#outercontainer #register input {
+        width: 100%;
+        font-size: 2em;
+        font-weight: 200;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+#outercontainer #register input[type=submit] {
+        background-color: hsla(357, 62%, 51%, 1);
+        color: white;
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        box-sizing: border-box;
+        font-size: 18px;
+      }
+
+input[type=button] {
+		background-color: #8AB8E6;
+        color: white;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px;
+        border: none;
+        font-size: 18px;
+	}
+	    
+#blurb {
+	padding: 5px;
+}
+
+#register{
+	margin-top: 20px;
+	padding: 15px;
+	}    
+      
+   .album {
+	 background-color: hsla(357, 62%, 51%, 1);
+	 box-sizing: border-box;
+	 padding: 1.5em;
+	
+}
+#formcontainer{
+	text-align: center;
+	width: 30%;
+	background-color: hsla(357, 62%, 51%, 0.9);
+	height: 25%;
+	border: 2px solid pink;
+    border-radius: 25px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 20%;
+	margin-top: 10%;
+	font-size:0.5em;
+} 
+#err{
+	color:#5070A1;
+	font-family: Roboto, helvetica, arial, sans-serif;
+	padding: 5%;
+} 
+.l{
+	box-sizing: border-box;
+	background-color: #8AB8E6;
+	border-radius: 15px;
+    color: white;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 0.1%;
+}
+ 
+footer{
+	background-color: #8AB8E6;
+	font-family: Roboto, helvetica, arial, sans-serif;
+	color:hsl(357, 62%, 51%);
+	text-align: center;
+	height: 5%;
+	width: 100%;
+	font-size: 0.5em;
+	padding: 5px;
+	
+}
+/* For responsiveness to DESKTOP! */ 
+/* The content of container and outer - blurb video and form */     
+@media screen and (min-width: 600px) {
+
+          
+.container {
+            margin: auto;
+            max-width: 950px;
+          }
+          
+.album {
+		margin: auto;
+		float: left;
+		width: 80%
+	}          
+img {
+	margin: auto;
+	width: 80%
+}
+#outercontainer {
+            padding: 20px 5%;
+            height:700px;
+            
+          }
+          
+
+#outercontainer #blurb {
+            float:left; 
+            font-weight: 200;
+            width: 50%;
+            font-size: 18px;
+            box-sizing: border-box;
+            padding-right: 10px;
+          }
+
+#outercontainer #register {
+            float:right;
+            padding: 20px;
+            width: 50%;
+            box-sizing: border-box;
+            font-weight: 300;
+          }
+
+#outercontainer br {
+            clear: both;
+          }
+#formcontainer{
+	width: 30%;
+	height: 30%;
+	margin-left: 25%;
+	color: white;
+	font-size:1.2em;
+	font-family: Roboto, helvetica, arial, sans-serif;;
+	
+}
+
+footer{
+	font-size: 1em;
+}
